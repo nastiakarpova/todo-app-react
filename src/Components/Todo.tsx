@@ -1,19 +1,21 @@
 import React from "react"
 
 
-function Todo(props) {
+function Todo(props: any) {
+
     return(
         <div>
             <div>
-                
+                <label>
+                    
                     <input type="checkbox" id={props.item.id} 
-                        name="task-inp" className="task-li" />
-                    <label 
-                        for="task-inp">{props.item.description}
-                    </label>
-                
-            </div>
+                        className="task-li" />
 
+                    {props.item.description}
+
+                    <span className="check"></span>
+                </label>
+            </div>
         </div>
     );
 }
